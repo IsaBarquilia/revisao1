@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-*{
+
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-  
+
 }
-body{
-      background-color: #18181b;
-        
+
+body {
+    background-color: #18181b;
+
 }
-main{
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,31 +21,36 @@ main{
     height: 100vh;
     gap: 3.5rem
 }
-img{
-    width: 31rem;    
+
+img {
+    width: 31rem;
 }
-#form{
+
+#form {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    color:#f8fafc;
+    color: #f8fafc;
     font-size: 20px;
     background-color: #262626;
     border-radius: 8px;
-    
+
 }
-#calculator{
+
+#calculator {
     display: flex;
     flex-direction: column;
     padding: 2rem;
     gap: 2rem;
 }
-.inputbox label{
+
+.inputbox label {
     font-weight: 500;
     font-size: 1.2rem;
     color: #cbd5e1
 }
-.inputfield{
+
+.inputfield {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +59,8 @@ img{
     border-radius: 4px;
     margin-top: 2px;
 }
-.inputfield input{
+
+.inputfield input {
     background-color: transparent;
     border: none;
     width: 100%;
@@ -60,25 +69,116 @@ img{
     padding: 0 0.5rem;
 }
 
-.inputfield input::-webkit-inner-spin-button{
+.inputfield input::-webkit-inner-spin-button {
     appearance: none;
 }
-.unit, .icon{
-    color:#cbd5e1;
+
+.unit,
+.icon {
+    color: #cbd5e1;
     font-size: 1.3rem;
     padding: 0.6rem 1rem;
 }
-#calculate{
-    color:#d6d6d7;
+
+#calculate {
+    color: #d6d6d7;
     background-color: #fb1b1b;
     border: none;
     font-size: 1.25rem;
     font-weight: bold;
     padding: o.5rem 0;
-   cursor: pointer;
+    cursor: pointer;
     width: 100%;
     border-radius: 3px;
 }
-.inputfield input:focus{
+#calculate:hover{
+    background-color: #9f0606;
+}
+
+.inputfield input:focus {
     outline: none;
+}
+
+#result {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid #ffffff34;
+    padding: 0.75rem 0;
+}
+#imc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25rem;
+
+}
+#status{
+    font-size: 1.25rem;
+    color:#cbd5e1
+}
+.normal{
+    color: #16a34a;
+}
+.attention{
+    color:#dc2626
+}
+#description{
+    width: 15.5rem;
+}
+#more_infos{
+    text-align: center;
+    border-top: 1px solid #ffffff34;
+    padding-top: 1.5rem;
+}
+#more-infos a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    color:#16a34a;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+#more-infos a:hover{
+    color:#cbd5e1
+}
+.hidden{
+    display: none;
+}
+#title{
+    font-size: 2.25rem;
+    position: relative;
+}
+#title::after{
+    position: absolute;
+    content: "";
+    width: 8rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #fb1b1b;
+    bottom: 0%;
+    left: 0%;
+}
+@media screen and (max-width: 1024px){
+    #picture{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    #picture{
+        display: none;
+    }
+    main{
+        width: 100%;
+        height: 100%;
+
+    }
+    form{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
 }
