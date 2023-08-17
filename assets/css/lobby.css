@@ -12,12 +12,3 @@ button:hover{
     background-color: #02416b;
     transition: 0.6s;
 }
-input{
-    background-color: #0375a7;
-    color:#fff;
-    width: 90%;
-    padding: 0.25rem;
-    border-radius: 8px;
-    padding: 10px;
-    margin-top: 1px;
-}
