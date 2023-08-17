@@ -77,17 +77,27 @@ function displayCategoriesAndProducts() {
 
     categoryList.categories.forEach((category) => {
         content +=
-            `
+    `
             <li>
                 <div class="categoriesList">
-                    <span><b>Categoria</b>${category.name}</span>
+                    <span><b>Categoria</b> ${category.name}</span>
                     <div>
                     <button class="editButton">Editar</button>
                     <button class="deleteButton">Remover</button>
                     </div>
                 </div>
+                <ul class="productsListByCategory">`;
+                category.products.forEach((product) =>{
+                    content+=`
             </li>
-            `
+            <div class="productsList">
+            <span><b>Produto</b> ${product.name}</span>
+            <div>
+            <button class="editButton">Editar</button>
+            <button class="deleteButton">Remover</button>
+            </div>
+        </div>`
+    })   
     })
     document.getElementById("categoriesList").innerHTML = content;
-}
+    }
