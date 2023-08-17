@@ -25,3 +25,11 @@ class CategoryService{
         this.categories.push(category);
     }
 }
+const categoryList = new CategoryService();
+
+function createCategory() {
+    const categoryName = "Docê";
+
+    categoryList.addCategory(categoryName);
+    console.log(categoryList.categories)
+}
